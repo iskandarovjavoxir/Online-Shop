@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -15,4 +17,6 @@ public class Card {
     private Long id;
     @Column(nullable = false, unique = true)
     private String card_number;
+    @Column(nullable = false)
+    private Date expiry_date;
 }
