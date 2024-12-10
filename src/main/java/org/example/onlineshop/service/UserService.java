@@ -42,6 +42,11 @@ public class UserService {
         return userRepository.findById(id).get();
     }
 
+    //READ BY Email
+    public User getUserByEmail(String email){
+        return userRepository.findByEmail(email).get();
+    }
+
     //UPDATE
     public Result editUser(String email, UserDto userDto){
         Optional<User> userOptional = userRepository.findByEmail(email);
