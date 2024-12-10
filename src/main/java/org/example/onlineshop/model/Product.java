@@ -17,6 +17,8 @@ public class Product {
     private String imageURL;
     @Column(nullable = false)
     private String product_name;
+    @Column(nullable = false, unique = true)
+    private String category;
     @Column(nullable = false)
     private String product_brand;
     @Column(nullable = false)
@@ -25,7 +27,4 @@ public class Product {
     private double price;
     @Column(nullable = false)
     private Integer quantity;
-//    @ManyToOne
-//    @JoinColumn(nullable = false)
-    private String category;
 }
